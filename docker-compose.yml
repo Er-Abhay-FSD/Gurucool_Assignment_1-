@@ -1,0 +1,27 @@
+version: '3'
+services:
+  backend:
+    build: .
+    ports:
+      - '5000:5000'
+    depends_on:
+      - mongodb
+      - rabbitmq
+
+  mongodb:
+    image: mongo:4.2
+    ports:
+      - '27017:27017'
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+
+  worker:
+    build: .
+    command: node worker.js
+    depends_on:
+      - mongodb
+      - rabbitmq

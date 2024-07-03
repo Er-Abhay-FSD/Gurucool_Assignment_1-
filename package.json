@@ -1,0 +1,32 @@
+{
+    "name": "queue-system",
+    "version": "1.0.0",
+    "description": "Backend system to manage requests from multiple users using a queue structure",
+    "main": "server.js",
+    "scripts": {
+        "start": "node --trace-deprecation server.js",
+        "dev": "nodemon server.js",
+        "test": "mocha"
+    },
+    "dependencies": {
+        "amqplib": "^0.8.0",
+        "bcrypt": "^5.1.0",
+        "body-parser": "^1.20.2",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "jsonwebtoken": "^9.0.2",
+        "mongodb": "^6.8.0",
+        "mongoose": "^7.7.0",
+        "punycode": "^2.3.1",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.1",
+        "yamljs": "^0.3.0"
+    },
+    "devDependencies": {
+        "chai": "^4.3.7",
+        "mocha": "^10.2.0",
+        "nodemon": "^3.0.1"
+    },
+    "author": "Your Name",
+    "license": "ISC"
+}
